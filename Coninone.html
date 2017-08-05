@@ -4,7 +4,7 @@
 <head>
     <title></title>
     <meta charset="UTF-8">
-    <meta http-equiv="Access-Control-Allow-Origin" content="*"> 
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Latest compiled and minified CSS -->
@@ -20,50 +20,216 @@
         crossorigin="anonymous"></script>
 
 </head>
-<script type="text/javascript"src="./api.js" ></script>
+<script type="text/javascript" src="./api.js"></script>
+
 <body>
 
-<div class="panel panel-default">
-    <div class="panel-heading">초 간단 시세(<span id="timestamp"> </span>) 현재시간 <span id="now"></span>
-        <br>
+
+<div class="container-fluid">
+    <div class="jumbotron">
+        <h1>시세 조회 코인원 </h1>
+        <P>2초마다 한번씩 API 호출<p>
+    </div>
+
+    <div class="row">
+        
+        
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <!-- panel-btc start -->
+            <div class="panel panel-default">
+                <div class="panel-heading"> BTC (<span id="btc-timestamp"> </span>) 현재시간 <span id="btc-now"></span>
+                    <br>
+
+                </div>
+                <div class="panel-body">
+                <table class="table">
+                    <thead>
+
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <th scope="row">Coin</th>
+                            <td id="btc-currency"> BTC </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">최고가</th>
+                            <td id="btc-high"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">최저가</th>
+                            <td id="btc-low"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">마지막 거래 가격(현재가)</th>
+                            <td id="btc-last"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첫 거래 가격</th>
+                            <td id="btc-first"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">거래량</th>
+                            <td id="btc-volume"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <!--./ panel-btc end -->
+        </div>
+        
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <!-- panel-etc start -->
+            <div class="panel panel-default">
+                <div class="panel-heading"> ETC (<span id="etc-timestamp"> </span>) 현재시간 <span id="etc-now"></span>
+                    <br>
+
+                </div>
+                <div class="panel-body">
+
+
+
+                    <table class="table">
+                        <thead>
+
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <th scope="row">Coin</th>
+                                <td id="etc-currency"> ETC </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">최고가</th>
+                                <td id="etc-high"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">최저가</th>
+                                <td id="etc-low"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">마지막 거래 가격(현재가)</th>
+                                <td id="etc-last"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">첫 거래 가격</th>
+                                <td id="etc-first"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">거래량</th>
+                                <td id="etc-volume"></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--./ panel-etc end -->
+        </div>
+       
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <!-- panel-eth start -->
+            <div class="panel panel-default">
+                <div class="panel-heading"> ETH (<span id="eth-timestamp"> </span>) 현재시간 <span id="eth-now"></span>
+                    <br>
+
+                </div>
+                <div class="panel-body">
+                <table class="table">
+                    <thead>
+
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <th scope="row">Coin</th>
+                            <td id="eth-currency"> ETH </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">최고가</th>
+                            <td id="eth-high"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">최저가</th>
+                            <td id="eth-low"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">마지막 거래 가격(현재가)</th>
+                            <td id="eth-last"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첫 거래 가격</th>
+                            <td id="eth-first"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">거래량</th>
+                            <td id="eth-volume"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <!--./ panel-eth end -->
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <!-- panel-xrp start -->
+            <div class="panel panel-default">
+                <div class="panel-heading"> XRP (<span id="xrp-timestamp"> </span>) 현재시간 <span id="xrp-now"></span>
+                    <br>
+
+                </div>
+                <div class="panel-body">
+                <table class="table">
+                    <thead>
+
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <th scope="row">Coin</th>
+                            <td id="xrp-currency"> XRP </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">최고가</th>
+                            <td id="xrp-high"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">최저가</th>
+                            <td id="xrp-low"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">마지막 거래 가격(현재가)</th>
+                            <td id="xrp-last"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첫 거래 가격</th>
+                            <td id="xrp-first"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">거래량</th>
+                            <td id="xrp-volume"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <!--./ panel-xrp end -->
+        </div>
         
     </div>
-    <table class="table">
-        <thead>
-            
-        </thead>
-        <tbody>
-           
-            <tr>
-                <th scope="row">Coin</th>
-                <td id="currency">비트코인</td>   
-            </tr>
-            <tr>
-                <th scope="row">최고가</th>
-                <td id="high"></td>   
-            </tr>
-            <tr>
-                <th scope="row">최저가</th>
-                <td id="low"></td>   
-            </tr>
-            <tr>
-                <th scope="row">마지막 거래 가격</th>
-                <td id="last"></td>   
-            </tr>
-            <tr>
-                <th scope="row">첫 거래 가격</th>
-                <td id="first"></td>   
-            </tr>
-            <tr>
-                <th scope="row">거래량</th>
-                <td id="volume"></td>   
-            </tr>
-            
-        </tbody>
-    </table>
+    
+  
+    
+    
+
+    
 </div>
-
-
 
 </body>
 
